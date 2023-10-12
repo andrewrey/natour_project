@@ -74,6 +74,9 @@ header {
   animation: move-in-right 1s ease-out;
 }
 
+.btn:link {
+}
+
 @keyframes move-in-left {
   0% {
     opacity: 0;
