@@ -112,10 +112,20 @@ header {
   bottom: 0;
   left: 0;
   z-index: -1;
+  transition: all 0.2s;
 }
 
 .btn-white::after {
   background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scale(1.5, 1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: move-up 1s ease-out 0.75s backwards;
 }
 
 @keyframes move-in-left {
@@ -151,5 +161,16 @@ header {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes move-up {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
